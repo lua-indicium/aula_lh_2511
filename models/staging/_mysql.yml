@@ -9,8 +9,6 @@ sources:
       Sales data from Adventure Works used to build the orders fact
       and related dimensions.
 
-    loaded_at_field: extraction_date
-
     tables:
       - name: raw__sales_customer
         description: Customer master data.
@@ -30,8 +28,6 @@ sources:
     schema: raw
     description: >
       Person and address information related to customers.
-
-    loaded_at_field: extraction_date
 
     tables:
       - name: raw__s3_person_person

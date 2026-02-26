@@ -20,8 +20,7 @@ with
         from stores
         left join address
             on stores.store_id = address.address_id
-
-)
+    )
 
 select *
 from joined

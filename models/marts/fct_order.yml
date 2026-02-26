@@ -1,7 +1,7 @@
 version: 2
 
 models:
-  - name: fct_orders
+  - name: fct_order
     description: >
       Fact table containing sales order line-level data.
       Each row represents one sales order with associated customer

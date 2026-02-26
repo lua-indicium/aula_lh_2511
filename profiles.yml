@@ -1,0 +1,12 @@
+aula_lh_2511:
+  target: "{{ env_var('DBT_DEFAULT_TARGET') }}"
+  outputs:
+    dev:
+      type: databricks
+      catalog: "{{ env_var('DEV_DATABRICKS_CATALOG') }}"
+      schema: "{{ env_var('DEV_SCHEMA_NAME') }}"
+      host: "{{ env_var('DEV_DATABRICKS_HOST') }}"
+      http_path: "{{ env_var('DEV_DATABRICKS_HTTP_PATH') }}"
+      token: "{{ env_var('DEV_DATABRICKS_TOKEN') }}"
+      threads: 1
+      ansi_mode: false

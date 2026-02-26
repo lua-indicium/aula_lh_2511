@@ -29,7 +29,6 @@ with
             on customers.person_id = person.business_entity_id
         left join address
             on customers.customer_id = address.address_id
-
     )
 
 select *
