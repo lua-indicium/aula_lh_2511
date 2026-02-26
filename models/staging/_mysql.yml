@@ -1,0 +1,41 @@
+version: 2
+
+sources:
+
+  - name: raw_sales
+    database: mesh_dev_db
+    schema: raw
+    description: >
+      Sales data from Adventure Works used to build the orders fact
+      and related dimensions.
+
+    loaded_at_field: extraction_date
+
+    tables:
+      - name: raw__sales_customer
+        description: Customer master data.
+
+      - name: raw__sales_store
+        description: Store (reseller) information.
+
+      - name: raw__sales_salesorderheader
+        description: Sales order header data.
+
+      - name: raw__sales_salesorderdetail
+        description: Sales order line-level data.
+
+
+  - name: raw_person
+    database: mesh_dev_db
+    schema: raw
+    description: >
+      Person and address information related to customers.
+
+    loaded_at_field: extraction_date
+
+    tables:
+      - name: raw__s3_person_person
+        description: Personal information for customers.
+
+      - name: raw__person_address
+        description: Address information.

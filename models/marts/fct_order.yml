@@ -1,0 +1,35 @@
+version: 2
+
+models:
+  - name: fct_orders
+    description: >
+      Fact table containing sales order line-level data.
+      Each row represents one sales order with associated customer
+      and store dimensions, along with basic revenue metrics.
+
+    columns:
+
+      - name: sales_order_id
+        description: Natural identifier of the sales order from the source system.
+        data_tests:
+          - not_null
+
+      - name: order_date
+        description: Date when the order was created.
+        tests:
+          - not_null
+
+      - name: order_qty
+        description: Quantity of items in the order.
+        tests:
+          - not_null
+
+      - name: subtotal
+        description: Subtotal amount before tax and freight.
+        tests:
+          - not_null
+
+      - name: total_amount
+        description: Total order amount including tax and freight.
+        tests:
+          - not_null
